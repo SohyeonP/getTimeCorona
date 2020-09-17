@@ -1,4 +1,4 @@
-package com.alpha.corona19.demo;
+package com.alpha.dom;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -16,7 +16,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -49,7 +48,7 @@ public class RESTAPI extends Thread {
 
         SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd");
         Calendar cal = Calendar.getInstance();
-        
+
         cal.add(cal.DATE,0);
         String Yesterday =date.format(cal.getTime());
         System.out.println(Yesterday);
@@ -205,3 +204,4 @@ public class RESTAPI extends Thread {
                     data.put("치료중 환자 수",careCnt);
                     data.put("누적 검사 수",accExamCnt);
                     data.put("누적 결과 음성 수",resultNegCnt);*/
+

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+.App {
+  font-family: 'Noto Sans KR', sans-serif;
+   
+}
+.App-title{
+  color: #cccccc;
+  font-size: 9pt;
+}
+.logo{
+  width:;
+}
+.update-date{
+  font-size: 7px;
+  color: #444444;
+}
+.search-bar{
+  width: 1230px;
+  background-color:white;
+  display: flex;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+}
+.search-bar>img{
+  width: 50px;
+  height: 50px;
+  align-content: center;
+  margin-left: 5px;
+}
+.search-bar>input{
+  width: 1180px;
+  height: 50px;
+  border-color: transparent; 
+}
+body{
+
+}
+.App-header {
+ justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+}
+.content-box{
+  /* flex-direction: row; */
+  display: flex;
+  
+}
+.App-header>h4{
+  /* text-align: left; */
+  color:#282828;
+}
+.h6{
+  color: #444444;
+}
+.clearfix1,.clearfix2{
+  color: black;
+  
+}
+.clearfix2{
+  margin-left: 20px;
+}
+.clearfix1>.box{
+  /* display: inline; */
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+}
+.clearfix2>.box{
+  flex-direction: column;
+ 
+  width: 700px;
+  height: 332px;
+  background-color: white;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+}
+.box{
+  font-size: small;
+  width: 500px;
+  height: 400px;
+  
+}
+#chart1{
+  width: 500px;
+  height: 200px;
+}
+
+

@@ -1,5 +1,6 @@
 package com.alpha.dom;
 
+import lombok.Getter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,5 +29,10 @@ public class MainController {
         String format_time = format.format (System.currentTimeMillis());
         return "최종 업데이트 시간-"+format_time+"깃 수정";
 
+    }
+    @GetMapping("/updatedata")
+    public String updateData(){
+
+        return null;
     }
 }

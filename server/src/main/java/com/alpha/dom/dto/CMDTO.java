@@ -1,14 +1,18 @@
 package com.alpha.dom.dto;
 
+import com.sun.xml.txw2.annotation.XmlElement;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
-@Getter
-@Setter
-public class CMdto {
-    private int seq ;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+public class CMDTO {
+    private int no ;
+    private int seq;
     private String state_date;
     private String decide_cnt;
     private String clear_cnt;

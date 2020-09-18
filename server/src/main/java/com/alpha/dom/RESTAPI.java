@@ -27,7 +27,7 @@ public class RESTAPI extends Thread {
 
 
 
-    private static String getTagValue(String tag, Element ele) {
+   /* private static String getTagValue(String tag, Element ele) {
 
         NodeList nodeList = ele.getElementsByTagName(tag).item(0).getChildNodes();
 
@@ -40,7 +40,7 @@ public class RESTAPI extends Thread {
         }
 
         return nValue.getNodeValue();
-    }
+    }*/
 
     public List<String> Parsing() {
         StringBuffer result = new StringBuffer();
@@ -100,20 +100,17 @@ public class RESTAPI extends Thread {
             NodeList nodeList = element.getElementsByTagName("item");
             System.out.println("파싱할 리스트 수 : " + nodeList.getLength());
 
-          /* for (int i = 0;i < nodeList.getLength(); i++) {
-                Node nNode = nodeList.item(i);
-                System.out.println(item(i));
-              *//* if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+           for (int i = 0;i < nodeList.getLength(); i++) {
 
-                    Element element = (Element) nNode;
-                }*//*
-                Node temp = nNode.getFirstChild();
+               Node nNode = nodeList.item(i);
 
-                String value = temp.getNodeValue();
-                System.out.println(value);
-             data.add(value);
-                System.out.println("data ========================================="+data);
-            }*/
+               Node temp = nNode.getFirstChild();
+
+               String value = temp.getNodeValue();
+               System.out.println(value);
+               data.add(value);
+               System.out.println("data =========================================" + data);
+           }
 
             // 데이터값 Json 형식으로 전달
             /*JSONObject jsonObject = new JSONObject();

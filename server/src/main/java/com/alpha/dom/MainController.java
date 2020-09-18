@@ -26,7 +26,7 @@ public class MainController {
     public String hello(){
         SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM일 dd일 HH시mm분ss초");
         String format_time = format.format (System.currentTimeMillis());
-        return "최종 업데이트 시간-"+format_time;
+        return "최종 업데이트 시간-"+format_time+"깃 수정";
 
     }
 }

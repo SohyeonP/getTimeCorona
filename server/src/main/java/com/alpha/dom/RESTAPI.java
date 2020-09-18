@@ -25,7 +25,7 @@ public class RESTAPI extends Thread {
     private String xml;
     List<String> data = new ArrayList<String>();
 
-    /*int stateDt,stateTime,decideCnt,clearCnt,deathCnt,examCnt,careCnt,accExamCnt,resultNegCnt,seq;*/
+
 
     private static String getTagValue(String tag, Element ele) {
 
@@ -50,11 +50,12 @@ public class RESTAPI extends Thread {
         Calendar cal = Calendar.getInstance();
 
         cal.add(cal.DATE,0);
-        String Yesterday =date.format(cal.getTime());
-        System.out.println(Yesterday);
-        cal.add(cal.DATE,-1);
         String Today =date.format(cal.getTime());
         System.out.println(Today);
+        cal.add(cal.DATE,-1);
+        String Yesterday =date.format(cal.getTime());
+
+        System.out.println(Yesterday);
         /*------------------------------------------*/
         try {
             String urlstr = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?" +
@@ -92,40 +93,39 @@ public class RESTAPI extends Thread {
             Document doc = builder.parse(is);
             Element element = doc.getDocumentElement();
 
-            /*doc.getDocumentElement().normalize();
+            doc.getDocumentElement().normalize();
             System.out.println("Root Element:"+doc.getDocumentElement().getNodeName());
-*/
 
 
             NodeList nodeList = element.getElementsByTagName("item");
             System.out.println("파싱할 리스트 수 : " + nodeList.getLength());
 
-          /*  for (int i = 0;i < nodeList.getLength(); i++) {
+          /* for (int i = 0;i < nodeList.getLength(); i++) {
                 Node nNode = nodeList.item(i);
-
-               *//* System.out.println("엔노드+++++++++++++++++++++"+nNode);*//*
-             *//*                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                System.out.println(item(i));
+              *//* if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
                     Element element = (Element) nNode;
                 }*//*
                 Node temp = nNode.getFirstChild();
 
                 String value = temp.getNodeValue();
-                *//*System.out.println(value);*//*
-             *//*data.add(value);*//*
-                System.out.println(data);
+                System.out.println(value);
+             data.add(value);
+                System.out.println("data ========================================="+data);
             }*/
 
             // 데이터값 Json 형식으로 전달
-            JSONObject jsonObject = new JSONObject();
+            /*JSONObject jsonObject = new JSONObject();
             JSONObject data = new JSONObject();
             JSONArray req_array = new JSONArray();
             req_array.add(data);
-            jsonObject.put("REQ_DATA",req_array);
+            jsonObject.put("REQ_DATA",req_array);*/
 
             /*  return jsonObject.toJSONString();*/
 
-
+            /*String stateDt,stateTime,decideCnt,clearCnt,deathCnt,examCnt,careCnt,accExamCnt,resultNegCnt,seq;
+                   stateDt = getTagValue("stateDt",element);*/
            /* System.out.print("기준일:"+getTagValue("stateDt",element));
 
             System.out.println("기준시간"+getTagValue("stateTime",element));

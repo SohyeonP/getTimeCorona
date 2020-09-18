@@ -25,7 +25,7 @@ public class RESTAPI extends Thread {
     private String xml;
     List<String> data = new ArrayList<String>();
 
-    int stateDt,stateTime,decideCnt,clearCnt,deathCnt,examCnt,careCnt,accExamCnt,resultNegCnt,seq;
+    /*int stateDt,stateTime,decideCnt,clearCnt,deathCnt,examCnt,careCnt,accExamCnt,resultNegCnt,seq;*/
 
     private static String getTagValue(String tag, Element ele) {
 

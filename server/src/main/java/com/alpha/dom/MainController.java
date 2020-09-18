@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 @RestController
@@ -22,7 +24,9 @@ public class MainController {
 
     @GetMapping("/api/hello")
     public String hello(){
-        return "안녕하세요. 현재 시간은 1시입니다.- 서버에서 넘어오는 시간 \n";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM일 dd일 HH시mm분ss초");
+        String format_time = format.format (System.currentTimeMillis());
+        return "최종 업데이트 시간-"+format_time;
 
     }
 }

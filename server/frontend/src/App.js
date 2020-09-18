@@ -1,4 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
+
+
 import img1 from '../src/images/search.png';
 import './App.css';
 import Logo from './logo';

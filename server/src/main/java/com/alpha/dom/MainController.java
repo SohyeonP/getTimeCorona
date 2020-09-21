@@ -1,25 +1,23 @@
 package com.alpha.dom;
 
-import lombok.Getter;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.alpha.dom.dto.CMDTO;
+import com.alpha.dom.service.CoronaService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
-
+@Slf4j
 @RestController
 public class MainController {
+
+    @Autowired
+    CoronaService coronaService;
+
     @RequestMapping(value = "/test", method = {RequestMethod.GET, RequestMethod.POST})
     public String callapihttp() {
 
-        RESTAPI restapi = new RESTAPI();
-        restapi.Parsing();
-
-        return restapi.data;
+        return null;
 
     }
 
@@ -30,9 +28,13 @@ public class MainController {
         return "최종 업데이트 시간-"+format_time+"깃 수정";
 
     }
-    @GetMapping("/updatedata")
+    @PostMapping("/update")
     public String updateData(){
 
-        return null;
+
+        RESTAPI restapi = new RESTAPI();
+        restapi.Parsing();
+        return restapi.data;
+
     }
 }

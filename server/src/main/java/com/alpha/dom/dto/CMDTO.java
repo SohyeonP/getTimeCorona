@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 public class CMDTO {
-    private int no ;
     private int seq;
     private String state_date;
     private String decide_cnt;

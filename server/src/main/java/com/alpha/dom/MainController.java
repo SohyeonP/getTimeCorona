@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class MainController {
     @RequestMapping(value = "/test", method = {RequestMethod.GET, RequestMethod.POST})
-    public List<String> callapihttp() {
+    public String callapihttp() {
 
         RESTAPI restapi = new RESTAPI();
         restapi.Parsing();

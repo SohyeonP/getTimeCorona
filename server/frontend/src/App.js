@@ -24,11 +24,19 @@ function App() {
 
       <div className="search-bar"><input placeholder="코로나 내용을 검색해 주세요" /><img src={img1} alt="" /></div>
       
-      <div className="menu">
-        <div>Menu</div>
-      </div>
       
-     
+        
+        <ul class="tap-menu">
+  <li title="home"><a href="#" class="home">home</a></li>
+  <li title="search"><a href="#" class="search">search</a></li>
+  <li title="pencil"><a href="#" class="pencil">pencil</a></li>
+  <li title="about"><a href="#" class="active about">about</a></li>
+  <li title="archive"><a href="#" class="archive">archive</a></li>
+  <li title="contact"><a href="#" class="contact">contact</a></li>
+</ul>
+        
+  
+    
       <div className="content-box">
 
         <div className="clearfix1">

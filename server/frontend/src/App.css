@@ -124,4 +124,18 @@
   height: 200px;
 }
 
+.tap-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
 
+}
+.tap-menu>li{
+  margin-top:60px;
+  
+}

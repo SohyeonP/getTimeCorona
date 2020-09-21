@@ -3,8 +3,9 @@
 /* 페이지 전체 CSS */
 .App {
   font-family: 'Noto Sans KR', sans-serif;
-  width: 1500px;
-  margin: 20px auto 0;
+  margin-left: 150px;
+  max-width: 1500px;
+  min-width: 800px;
 }
 
 
@@ -30,7 +31,7 @@
 
 
 /* 검색 CSS */
-.search-bar{
+/* .search-bar{
   width: 1130px;
   height: 50px;
   background-color:white;
@@ -59,21 +60,63 @@
 
 .search-bar>input:focus{
   outline: none;
+} */
+
+.searchbar{
+  position: absolute;
+  top: 30px;
+  float: right;
+  width: 230px;
+  height: 30px;
+  margin-left: 1000px;
+  overflow: hidden;
 }
 
+.searchbar > input {
+  display: none;
+  height: 30px;
+  width: 0px;
+  border: 1px solid #8f8f8f;
+  float: right;
+  padding: 0;
+}
+
+.search-icon {
+  float: right;
+  background: #ffffff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #8f8f8f;
+  padding: 4px;
+}
+
+.search-icon > img {
+  width: 18px;
+  height: 18px;
+  -moz-transform: scaleX(-1); 
+  -o-transform: scaleX(-1); 
+  -webkit-transform: scaleX(-1); 
+  transform: scaleX(-1);
+}
 
 
 /* 메뉴 CSS */
-.menu{
-  top: 120px;
-  width: 150px;
-  height: 500px;
-  display: inline-block;
+.tap-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   background: #ffffff;
-  float: left;
-  margin-right: 100px;
-  position: sticky;
+
 }
+.tap-menu>li{
+  margin-top:60px;
+  
+}
+
 
 
 
@@ -124,18 +167,36 @@
   height: 200px;
 }
 
-.tap-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
 
+
+/* 코로나 현황 CSS */
+.corona{
+  min-width: 700px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.tap-menu>li{
-  margin-top:60px;
-  
+
+.corona div{
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #282828;
+  border-radius: 15px;
+  margin: 10px 50px;
+  text-align: center;
+}
+
+.corona div p {
+  font-size: 30px;
+  height: 40px;
+  margin: 10px;
+}
+
+.corona div p:after {
+  content: "";
+  border-bottom: 5px solid #282828;
+  width: 150px;
+  margin: 50px -80px;
+  position: absolute;
 }

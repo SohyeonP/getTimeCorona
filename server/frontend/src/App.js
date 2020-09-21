@@ -2,8 +2,26 @@ import React, { useState, useEffect } from 'react';
 import img1 from '../src/images/search.png';
 import './App.css';
 import Logo from './logo';
+import $ from 'jquery';
 // import logo from '../src/images/logo.png';
 
+
+$(document).ready(function() {
+  $(".search-icon").click(function() {
+    if($(".searchbar input ").hasClass("on") === true){
+      $(".searchbar input").removeClass("on");
+      $(".searchbar input").animate({
+        width: '0px'
+      })
+    }else{
+      $(".searchbar input").addClass("on");
+      $(".searchbar input").css("display","block");
+      $(".searchbar input").animate({
+        width: '200px'
+      })
+    }
+  })
+})
 
 function App() {
   const [message, setMessage] = useState("");
@@ -22,19 +40,34 @@ function App() {
         <div className="App-title">{message}</div>
       </header>
 
-      <div className="search-bar"><input placeholder="코로나 내용을 검색해 주세요" /><img src={img1} alt="" /></div>
-      
+      {/* <div className="search-bar"><input placeholder="코로나 내용을 검색해 주세요" /><img src={img1} alt="" /></div> */}
+      <div className="searchbar">
+        <button type="button" className="search-icon"><img src={img1} alt="search" /></button>
+        <input type="search"></input>
+      </div>
       
         
-        <ul class="tap-menu">
-  <li title="home"><a href="#" class="home">home</a></li>
-  <li title="search"><a href="#" class="search">search</a></li>
-  <li title="pencil"><a href="#" class="pencil">pencil</a></li>
-  <li title="about"><a href="#" class="active about">about</a></li>
-  <li title="archive"><a href="#" class="archive">archive</a></li>
-  <li title="contact"><a href="#" class="contact">contact</a></li>
-</ul>
+        <ul className="tap-menu">
+          <li title="home"><a href="#" className="home">home</a></li>
+          <li title="search"><a href="#" className="search">search</a></li>
+          <li title="pencil"><a href="#" className="pencil">pencil</a></li>
+          <li title="about"><a href="#" className="active about">about</a></li>
+          <li title="archive"><a href="#" className="archive">archive</a></li>
+          <li title="contact"><a href="#" className="contact">contact</a></li>
+        </ul>
         
+
+        <div className="corona">
+          <div>
+            <p>1</p>
+          </div>
+          <div>
+            <p>2</p>
+          </div>
+          <div>
+            <p>3</p>
+          </div>
+        </div>
   
     
       <div className="content-box">

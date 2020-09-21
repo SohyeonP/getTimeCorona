@@ -1,80 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 
+
 /* 페이지 전체 CSS */
 .App {
   font-family: 'Noto Sans KR', sans-serif;
-  margin-left: 150px;
-  max-width: 1500px;
-  min-width: 800px;
 }
-
-
-
-
-/* 로고와 message부분 CSS */
-.App-header {
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  margin-bottom: 15px;
- }
-
- .App-header>h4{
-  color:#282828;
-}
-
-.App-title{
-  color: #cccccc;
-  font-size: 9pt;
-}
-
-
 
 
 /* 검색 CSS */
-/* .search-bar{
-  width: 1130px;
-  height: 50px;
-  background-color:white;
-  display: inline-block;
-  border-radius: 7px;
-  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
-}
-
-.search-bar>img{
-  margin: 7.5px;
-  width: 35px;
-  height: 35px;
-  float: right;
-  -moz-transform: scaleX(-1); 
-  -o-transform: scaleX(-1); 
-  -webkit-transform: scaleX(-1); 
-  transform: scaleX(-1);
-}
-
-.search-bar>input{
-  width: 1050px;
-  height: 50px;
-  background: none;
-  border: none;
-}
-
-.search-bar>input:focus{
-  outline: none;
-} */
 
 .searchbar{
   position: absolute;
   top: 30px;
-  float: right;
   width: 230px;
-  height: 30px;
-  margin-left: 1000px;
+  float: right;
   overflow: hidden;
 }
 
 .searchbar > input {
   display: none;
-  height: 30px;
   width: 0px;
   border: 1px solid #8f8f8f;
   float: right;
@@ -84,19 +28,69 @@
 .search-icon {
   float: right;
   background: #ffffff;
-  width: 30px;
-  height: 30px;
   border: 1px solid #8f8f8f;
-  padding: 4px;
 }
 
 .search-icon > img {
-  width: 18px;
-  height: 18px;
   -moz-transform: scaleX(-1); 
   -o-transform: scaleX(-1); 
   -webkit-transform: scaleX(-1); 
   transform: scaleX(-1);
+}
+
+
+
+
+
+
+/* 내용 CSS */
+.clearfix1,.clearfix2{
+  color: black;
+}
+
+.clearfix1>.box{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+}
+
+.clearfix2>.box{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+}
+
+
+
+/* 코로나 현황 CSS */
+.corona div{
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #282828;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.corona div p:after {
+  content: "";
+  position: absolute;
+}
+
+
+/* 로고와 message부분 CSS */
+.App-header {
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin-bottom: 15px;
+}
+
+.App-header>h4{
+  color:#282828;
+}
+
+.App-title{
+  color: #cccccc;
+  font-size: 9pt;
 }
 
 
@@ -114,89 +108,151 @@
 }
 .tap-menu>li{
   margin-top:60px;
-  
 }
 
 
 
 
 
-/* 내용 CSS */
-.content-box{
-  /* flex-direction: row; */
-  display: flex;
+@media(min-width:990px){
+  .App {
+    margin: 30px 20%;
+  }
+
+  .searchbar{
+    width: 400px;
+    margin-left: 45%;
+    height: 40px;
+  }
+
+  .searchbar>input{
+    height: 40px;
+  }
+
+  .search-icon{
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+  }
+
+  .search-icon>img{
+    height: 30px;
+    width: 30px;
+  }
+
+  .content-box{
+    /* flex-direction: row; */
+    display: flex;
+  }
+
+  .clearfix1,.clearfix2{
+    color: black;
+  }
+
+  .clearfix2{
+    margin-left: 20px;
+  }
+
+  .clearfix1>.box{
+    /* display: inline; */
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+
+  .clearfix2>.box{
+    flex-direction: column;
+    width: 700px;
+    height: 332px;
+    margin-bottom: 20px;
+  }
+
+  .box{
+    font-size: small;
+    width: 500px;
+    height: 400px;
+  }
+
+  #chart1{
+    width: 500px;
+    height: 200px;
+  }
+
+  .corona{
+    width: 1200px;
+    margin-left: 150px;
+  }
+
+  .corona div{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 10px 50px;
+  }
+
+  .corona div p {
+    font-size: 30px;
+    height: 40px;
+    margin: 10px;
+  }
+
+  .corona div p:after {
+    border-bottom: 5px solid #282828;
+    width: 150px;
+    margin: 50px -80px;
+  }
 }
 
-.clearfix1,.clearfix2{
-  color: black;
-}
-
-.clearfix2{
-  margin-left: 20px;
-}
-
-.clearfix1>.box{
-  /* display: inline; */
-  flex-direction: column;
-  width: 500px;
-  height: 400px;
-  background-color: white;
-  border-radius: 7px;
-  margin-bottom: 20px;
-  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
-}
-
-.clearfix2>.box{
-  flex-direction: column;
-  width: 700px;
-  height: 332px;
-  background-color: white;
-  border-radius: 7px;
-  margin-bottom: 20px;
-  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
-}
-
-.box{
-  font-size: small;
-  width: 500px;
-  height: 400px;
-}
-
-#chart1{
-  width: 500px;
-  height: 200px;
-}
 
 
+@media(min-width: 768px) and (max-width:990px){
+  .App{
+    margin: 20px 0 0 160px;
+  }
 
-/* 코로나 현황 CSS */
-.corona{
-  min-width: 700px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .tap-menu{
+    width: 100px;
+  }
 
-.corona div{
-  width: 200px;
-  height: 200px;
-  background: #ffffff;
-  display: inline-block;
-  border: 1px solid #282828;
-  border-radius: 15px;
-  margin: 10px 50px;
-  text-align: center;
-}
+  .searchbar{
+    margin-left: 10%;
+    width: 500px;
+    height: 70px;
+  }
 
-.corona div p {
-  font-size: 30px;
-  height: 40px;
-  margin: 10px;
-}
+  .searchbar > input{
+    height: 70px;
+    font-size: 20px;
+  }
 
-.corona div p:after {
-  content: "";
-  border-bottom: 5px solid #282828;
-  width: 150px;
-  margin: 50px -80px;
-  position: absolute;
+  .search-icon{
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+  }
+
+  .search-icon > img{
+    width: 55px;
+    height: 55px;
+  }
+
+  .corona div {
+    width: 25%;
+    height: 200px;
+    margin: 3%;
+  }
+
+  h4{
+    font-size: 30px;
+  }
+
+  .content-box{
+    width: 93%;
+  }
+
+  .box{
+    height: 400px;
+    margin-bottom: 60px;
+  }
 }

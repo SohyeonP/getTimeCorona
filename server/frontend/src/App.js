@@ -17,7 +17,7 @@ $(document).ready(function() {
       $(".searchbar input").addClass("on");
       $(".searchbar input").css("display","block");
       $(".searchbar input").animate({
-        width: '200px'
+        width: '300px'
       })
     }
   })
@@ -43,7 +43,7 @@ function App() {
       {/* <div className="search-bar"><input placeholder="코로나 내용을 검색해 주세요" /><img src={img1} alt="" /></div> */}
       <div className="searchbar">
         <button type="button" className="search-icon"><img src={img1} alt="search" /></button>
-        <input type="search"></input>
+        <input type="search" placeholder="뉴스를 검색하세요."></input>
       </div>
       
         

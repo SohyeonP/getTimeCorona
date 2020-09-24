@@ -16,7 +16,7 @@ import java.sql.Statement;
 public class PgSQLRunner implements ApplicationRunner {
 
 
-/*    @Autowired
+    @Autowired
     DataSource dataSource;
 
     @Autowired
@@ -24,12 +24,12 @@ public class PgSQLRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-            Connection connection = dataSource.getConnection();
-            Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE public.corona19 (ID serial NOT NULL PRIMARY KEY, JSON json NOT NULL)";
+        Connection connection = dataSource.getConnection();
+        Statement statement = connection.createStatement();
+        // String sql = "CREATE TABLE public.corona19 (ID serial NOT NULL PRIMARY KEY, JSON json NOT NULL)";
+        String sql = "CREATE TABLE public.corona19 (ID serial NOT NULL PRIMARY KEY, state_date DATE,  decide_cnt integer, clear_cnet integer, exam_cnt integer,death_cnt integer,care_cnt integer,result_neg_cnt integer,acc_exam_cnt integer)";
         statement.execute(sql);
-
-    }*/
+    }
 
 
 }

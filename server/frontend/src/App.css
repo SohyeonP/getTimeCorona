@@ -4,6 +4,8 @@
 /* 페이지 전체 CSS */
 .App {
   font-family: 'Noto Sans KR', sans-serif;
+  min-width: 800px;
+  max-width: 1100px;
 }
 
 
@@ -114,9 +116,9 @@
 
 
 
-@media(min-width:990px){
+@media(min-width:1210px){
   .App {
-    margin: 30px 20%;
+    margin: 30px auto;
   }
 
   .searchbar{
@@ -141,42 +143,42 @@
   }
 
   .content-box{
-    /* flex-direction: row; */
-    display: flex;
+    /* display: flex; */
   }
 
   .clearfix1,.clearfix2{
     color: black;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
   }
 
+  .clearfix1{
+    float: left;
+  }
   .clearfix2{
-    margin-left: 20px;
+    float: right;
   }
 
   .clearfix1>.box{
-    /* display: inline; */
-    flex-direction: column;
-    width: 500px;
-    height: 400px;
+    /* flex-direction: column; */
+    width: 95%;
+    height: 70%;
     margin-bottom: 20px;
   }
 
   .clearfix2>.box{
-    flex-direction: column;
-    width: 700px;
-    height: 332px;
+    /* flex-direction: column; */
+    width: 95%;
     margin-bottom: 20px;
   }
 
   .box{
     font-size: small;
-    width: 500px;
-    height: 400px;
   }
 
   #chart1{
-    width: 500px;
-    height: 200px;
+    height: 60%;
   }
 
   .corona{
@@ -206,35 +208,31 @@
 
 
 
-@media(min-width: 768px) and (max-width:990px){
+@media(max-width:1210px){
   .App{
-    margin: 20px 0 0 160px;
-  }
-
-  .tap-menu{
-    width: 100px;
+    margin: 20px 0 0 150px;
   }
 
   .searchbar{
-    margin-left: 10%;
+    margin-left: 250px;
     width: 500px;
     height: 70px;
   }
 
   .searchbar > input{
-    height: 70px;
-    font-size: 20px;
+    height: 35px;
+    font-size: 15px;
   }
 
   .search-icon{
-    width: 70px;
-    height: 70px;
-    padding: 5px;
+    width: 35px;
+    height: 35px;
+    padding: 4px;
   }
 
   .search-icon > img{
-    width: 55px;
-    height: 55px;
+    width: 25px;
+    height: 25px;
   }
 
   .corona div {

@@ -8,7 +8,10 @@
   max-width: 1100px;
 }
 
-
+.home{
+ max-width: 24px;
+ max-height: 24px;
+}
 /* 검색 CSS */
 
 .searchbar{
@@ -68,9 +71,10 @@
 .corona div{
   background: #ffffff;
   display: inline-block;
-  border: 1px solid #282828;
-  border-radius: 15px;
+  /* border: 1px solid #282828;
+  border-radius: 15px; */
   text-align: center;
+  box-shadow: 0.1px 0.1px 7px 1px rgba(118,118,118,0.2);
 }
 
 .corona div p:after {
@@ -98,6 +102,7 @@
 
 /* 메뉴 CSS */
 .tap-menu {
+  width: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -106,10 +111,25 @@
   margin: 0;
   padding: 0;
   background: #ffffff;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
 
 }
-.tap-menu>li{
-  margin-top:60px;
+.home{
+  margin-top: 50px;
+}
+.tap-menu>li>a>.contact{
+  width: 60px;
+}
+.tap-menu>li>a>img{
+  align-content: center;
+  margin-top:100px;
+  width: 30px;
+  height: 30px;
+  margin-left: 25px;
+  
+}
+.fas-fa-home{
+  color:black;
 }
 
 
@@ -144,6 +164,7 @@
 
   .content-box{
     /* display: flex; */
+    
   }
 
   .clearfix1,.clearfix2{
@@ -182,28 +203,31 @@
   }
 
   .corona{
-    width: 1200px;
-    margin-left: 150px;
+    width: 1250px;
+    
   }
 
   .corona div{
     width: 200px;
-    height: 200px;
+    height: 100px;
     border-radius: 15px;
     margin: 10px 50px;
   }
 
   .corona div p {
-    font-size: 30px;
+    font-size: px;
     height: 40px;
     margin: 10px;
   }
+  .corona>div>span{
+    color:red;
+  }
 
-  .corona div p:after {
+  /* .corona div p:after {
     border-bottom: 5px solid #282828;
     width: 150px;
-    margin: 50px -80px;
-  }
+    margin: 50px -150px;
+  } */
 }
 
 

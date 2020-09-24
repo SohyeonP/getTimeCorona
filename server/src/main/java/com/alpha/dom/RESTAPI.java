@@ -35,7 +35,7 @@ public class RESTAPI extends Thread {
     }
 
     public String Parsing() {
-
+        
         Map<String, String> map = new HashMap<>();
         ObjectMapper mapper = new ObjectMapper();
 
@@ -118,7 +118,7 @@ public class RESTAPI extends Thread {
                         "resultNegCnt : "+resultNegCnt+","+
                         "seq: "+seq+
                         "}";*/
-                map.put("seq",seq);
+        /*        map.put("seq",seq);
                 map.put("stateDt",stateDt);
                 map.put("stateTime",stateTime);
                 map.put("decideCnt",decideCnt);
@@ -134,7 +134,8 @@ public class RESTAPI extends Thread {
                 json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
 
                 System.out.println("json=========================="+json);
-                data = json;
+                data = json;*/
+
             }
 
         } catch (Exception e) {

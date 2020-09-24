@@ -19,6 +19,7 @@
           background-size: cover;
         }
     </style>
+    	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="stylesheet" href="./index.css"/>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
     <!--
@@ -50,4 +51,25 @@
   To create a production bundle, use `npm run build` or `yarn build`.
 -->
 </body>
+<script>
+  var ctx = document.getElementById('chart1').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['9/18', '9/19', '9/20', '9/21', '9/23', '9/24', '9/25'],
+        datasets: [{
+            label: '일별 확진자',
+            borderColor: 'rgb(239, 154, 154)',
+            backgroundColor:'rgba(225,225,225,0)',
+            data: [110, 82, 70, 61, 110, 125, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
 </html>

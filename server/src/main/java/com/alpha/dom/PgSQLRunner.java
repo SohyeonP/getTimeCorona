@@ -31,5 +31,6 @@ public class PgSQLRunner implements ApplicationRunner {
         statement.execute(sql);
     }
 
+    }
 
 }

@@ -28,13 +28,14 @@ public class MainController {
         return "최종 업데이트 시간-"+format_time+"깃 수정";
 
     }
-    @PostMapping("/update")
-    public String updateData(){
 
+    @GetMapping("/update")
+    public String updateData(){
 
         RESTAPI restapi = new RESTAPI();
         restapi.Parsing();
         return restapi.data;
 
     }
+
 }

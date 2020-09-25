@@ -27,8 +27,8 @@ public class PgSQLRunner implements ApplicationRunner {
         Connection connection = dataSource.getConnection();
         Statement statement = connection.createStatement();
         // String sql = "CREATE TABLE public.corona19 (ID serial NOT NULL PRIMARY KEY, JSON json NOT NULL)";
-        String sql = "CREATE TABLE public.corona19 (ID serial NOT NULL PRIMARY KEY, state_date DATE,  decide_cnt integer, clear_cnet integer, exam_cnt integer,death_cnt integer,care_cnt integer,result_neg_cnt integer,acc_exam_cnt integer)";
-        statement.execute(sql);
+        // String sql = "CREATE TABLE public.corona19 (ID serial NOT NULL PRIMARY KEY, state_date DATE,  decide_cnt integer, clear_cnet integer, exam_cnt integer,death_cnt integer,care_cnt integer,result_neg_cnt integer,acc_exam_cnt integer)";
+        // statement.execute(sql);
     }
 
 

@@ -7,6 +7,7 @@ import home from '../src/images/home.png';
 import info from '../src/images/info.png';
 import news from '../src/images/news.png';
 import contact from '../src/images/contact.png';
+import banner from '../src/images/banner.png';
 // import logo from '../src/images/logo.png';
 
 
@@ -78,6 +79,7 @@ function App() {
             20,832<span>(+182)</span>
           </div>
         </div>
+       
   
     
       <div className="content-box">
@@ -99,7 +101,9 @@ function App() {
         </div>
       </div>
 
-      
+      <div className ="banner ">
+          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
+        </div>
     </div>
     
   );

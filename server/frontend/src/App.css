@@ -170,6 +170,7 @@
     align-items: center;
     width: 1100px;
     height: 200px;
+    margin-top: 15px;
     box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
   }
   .clearfix1,.clearfix2{
@@ -208,19 +209,19 @@
   }
 
   .corona{
-    width: 1250px;
+    width: 1100px;
     
   }
 
   .corona div{
-    width: 200px;
+    width: 215px;
     height: 100px;
     border-radius: 15px;
-    margin: 10px 50px;
+    margin: 5px 25px;
   }
 
   .corona div p {
-    font-size: px;
+    font-size: 20px;
     height: 40px;
     margin: 10px;
   }
@@ -265,8 +266,8 @@
   }
 
   .corona div {
-    width: 25%;
-    height: 200px;
+    width: 30%;
+    height: 150px;
     margin: 3%;
   }
 
@@ -275,7 +276,7 @@
   }
 
   .content-box{
-    width: 93%;
+    width: 100%;
   }
 
   .box{

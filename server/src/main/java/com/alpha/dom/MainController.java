@@ -12,26 +12,29 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@RequestMapping("/api/main")
 public class MainController {
 
 	@Autowired
 	// CoronaService coronaService;
 	private CoronaMapper coronaM;
 
-	@RequestMapping(value = "/test", method = { RequestMethod.GET, RequestMethod.POST })
-	public String callapihttp() {
 
-		return null;
 
-	}
-
-	@GetMapping("/api/hello")
+	@GetMapping
 	public String hello() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM일 dd일 HH시mm분ss초");
 		String format_time = format.format(System.currentTimeMillis());
-		return "최종 업데이트 시간-" + format_time + "깃 수정";
+		 coronaM.findAll();
+		return "최종 업데이트 시간-" + format_time + "깃 수정"+"<br>"+ coronaM.findAll();
 
 	}
+//	@GetMapping
+//	public List<CMDTO> corondata(){
+//
+//			return coronaM.findAll();
+//
+//	}
 
 	@GetMapping("/update")
 	public String updateData() {
@@ -58,6 +61,8 @@ public class MainController {
 
 	@GetMapping("/list")
 	public List<CMDTO> showlist(){
+
+
 		return coronaM.findAll();
 	}
 

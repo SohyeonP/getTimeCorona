@@ -6,8 +6,8 @@
 <mapper namespace="com.alpha.dom.repository.CoronaMapper">
 
    <select id="selectAllCMDTO" resultType="CMDTO">
-     select user_id
-     FROM public.corona
+     select seq
+     FROM public.cmdto
    </select>
 
 

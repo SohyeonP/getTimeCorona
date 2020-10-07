@@ -6,10 +6,10 @@ import $ from 'jquery';
 import Tap_menu from './Tap_menu';
 
 import banner from '../src/images/banner.png';
-// import Info from '../src/Info';
-// import New from '../src/News';
-// import Mail from '../src/Mail';
-// import logo from '../src/images/logo.png';
+import Info from '../src/Info';
+import New from '../src/News';
+import Mail from '../src/Mail';
+import logo from '../src/images/logo.png';
 
 
 $(document).ready(function() {
@@ -67,9 +67,7 @@ function App() {
         <Tap_menu />
         
         
-        <div className ="banner ">
-          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
-        </div>
+        
         <div className="corona">
           <div>
             <p>오늘 확진자수</p>
@@ -89,6 +87,9 @@ function App() {
           </div>
         </div>
        
+        <div className ="banner ">
+          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
+        </div>
         
     
       <div className="content-box">
@@ -106,9 +107,10 @@ function App() {
           <div><h4>코로나 주요 뉴스</h4></div>
           <div className="tab_wrap">
           <div className="box"> <button className ="tab-menu-btn on">네이버</button>
-          <button className ="tab-menu--btn">다음</button></div>
+          {/* <button className ="tab-menu--btn">다음</button></div> */}
           <div className = "tab_box1 tab_box on">네이버뉴스 박스</div>
-          <div className = "tab_box2 tab_box">다음뉴스 박스</div>
+          {/* <div className = "tab_box2 tab_box">다음뉴스 박스</div> */}
+          </div>
           </div>
         </div>
       </div>

@@ -3,10 +3,8 @@ import img1 from '../src/images/search.png';
 import './css/App.css';
 import Logo from './logo';
 import $ from 'jquery';
-import home from '../src/images/home.png';
-import info from '../src/images/info.png';
-import news from '../src/images/news.png';
-import contact from '../src/images/contact.png';
+import Tap_menu from './Tap_menu';
+
 import banner from '../src/images/banner.png';
 // import Info from '../src/Info';
 // import New from '../src/News';
@@ -66,13 +64,8 @@ function App() {
         <input type="search" placeholder="뉴스를 검색하세요."></input>
       </div>
       
+        <Tap_menu />
         
-        <ul className="tap-menu">
-          <li title="home"><a href="#" className="home"><img src={home} alt="home" /></a></li>
-          <li title="info"><a href="#" className="info"><img src={info} alt="info" /></a></li>
-          <li title="news"><a href="#" className="news"><img src={news} alt="news" /></a></li>
-          <li title="contact"><a href="#" className="contact"><img src={contact} alt="contact" /></a></li>
-        </ul>
         
         <div className ="banner ">
           <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>

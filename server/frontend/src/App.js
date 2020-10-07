@@ -75,12 +75,14 @@ function App() {
             20,832<span>(+182)</span>
           </div>
           <div>
-          <p>격리 해제</p>
-            20,832<span>(+182)</span>
+          <p>사망자</p>
+            395<span>(+2)</span>
           </div>
         </div>
        
-  
+        <div className ="banner ">
+          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
+        </div>
     
       <div className="content-box">
 
@@ -101,9 +103,7 @@ function App() {
         </div>
       </div>
 
-      <div className ="banner ">
-          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
-        </div>
+     
     </div>
     
   );

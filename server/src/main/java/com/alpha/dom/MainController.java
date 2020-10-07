@@ -52,7 +52,7 @@ public class MainController {
 
 		coronaM.save(dto);
 
-		return restapi.seq;
+		return "마지막 업데이트 날짜:"+restapi.stateDt;
 
 	}
 

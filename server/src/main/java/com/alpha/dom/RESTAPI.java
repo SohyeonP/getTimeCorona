@@ -9,6 +9,8 @@ import java.util.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import com.alpha.dom.dto.CMDTO;
+import com.alpha.dom.repository.CoronaMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -21,7 +23,8 @@ public class RESTAPI extends Thread {
     String data;
     String stateDt, stateTime, decideCnt, clearCnt, deathCnt, examCnt, careCnt, accExamCnt, resultNegCnt, seq;
     public static int INDENT_FACTOR = 4;
-
+    private CoronaMapper coronaM;
+    CMDTO dto = new CMDTO();
     private static String getTagValue(String tag, Element ele) {
 
         NodeList nodeList = ele.getElementsByTagName(tag).item(0).getChildNodes();
@@ -56,8 +59,8 @@ public class RESTAPI extends Thread {
                     "&serviceKey=Xfdt8Gl%2B2MrsGlqYpaDuwrXn5%2B5IHh3FNeg%2BcTRm7GGK8Ww1ex8bLWX9ySv4jKatXJAXm%2FKRVaqLNFfWhsvm%2Bw%3D%3D" +
                     "&pageNo=1" +
                     "&numOfRows=10" +
-                    "&startCreateDt=" + Yesterday+
-                    "&endCreateDt=" + Today +
+                    "&startCreateDt=" +"20200901"+
+                    "&endCreateDt=" + "20200901" +
                     "&type=JSON";
             URL url = new URL(urlstr);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -110,7 +113,7 @@ public class RESTAPI extends Thread {
                 /*String jsonObject= "stateDt : "+stateDt+","+
                         "stateTime : "+stateTime+","+
                         "decideCnt : "+decideCnt+","+
-                        "clearCnt : "+clearCnt+","+
+                        "clearCnt : "+clearCnt+","+`
                         "deathCnt : "+deathCnt+","+
                         "examCnt : "+examCnt+","+
                         "careCnt : "+careCnt+","+
@@ -118,7 +121,11 @@ public class RESTAPI extends Thread {
                         "resultNegCnt : "+resultNegCnt+","+
                         "seq: "+seq+
                         "}";*/
-              map.put("seq",seq);
+
+
+                /*System.out.print(dto);*/
+
+              /*map.put("seq",seq);
                 map.put("stateDt",stateDt);
                 map.put("stateTime",stateTime);
                 map.put("decideCnt",decideCnt);
@@ -127,7 +134,7 @@ public class RESTAPI extends Thread {
                 map.put("examCnt",examCnt);
                 map.put("careCnt",careCnt);
                 map.put("accExamCnt",accExamCnt);
-                map.put("resultNegCnt",resultNegCnt);
+                map.put("resultNegCnt",resultNegCnt);*/
 
            /*       String json = mapper.writeValueAsString(map);
 
@@ -142,7 +149,7 @@ public class RESTAPI extends Thread {
             e.printStackTrace();
         }
 
-        return data;
+        return stateDt;
     }
 
 }

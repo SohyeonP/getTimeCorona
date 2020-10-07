@@ -114,6 +114,11 @@
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
 
 }
+.tap-menu>li>a>img{
+  background-color: transparent;
+  border-radius:15px;
+  box-shadow:  0.1px 0.1px 7px 1px  rgba(118,118,118,0.4);
+}
 .home{
   margin-top: 50px;
 }

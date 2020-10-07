@@ -4,26 +4,30 @@
 /* 페이지 전체 CSS */
 .App {
   font-family: 'Noto Sans KR', sans-serif;
-  min-width: 800px;
-  max-width: 1100px;
+  width: 1100px;
+  margin: 30px auto;
 }
 
 .home{
  max-width: 24px;
  max-height: 24px;
 }
-/* 검색 CSS */
 
+
+/* 검색 CSS */
 .searchbar{
   position: absolute;
   top: 30px;
-  width: 230px;
+  height: 40px;
+  width: 400px;
   float: right;
   overflow: hidden;
+  margin-left: 650px;
 }
 
 .searchbar > input {
   display: none;
+  height: 40px;
   width: 0px;
   border: 1px solid #8f8f8f;
   float: right;
@@ -34,6 +38,9 @@
   float: right;
   background: #ffffff;
   border: 1px solid #8f8f8f;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
 }
 
 .search-icon > img {
@@ -41,33 +48,30 @@
   -o-transform: scaleX(-1); 
   -webkit-transform: scaleX(-1); 
   transform: scaleX(-1);
+  height: 30px;
+  width: 30px;
 }
 
 
 
 
-
-
-/* 내용 CSS */
-.clearfix1,.clearfix2{
-  color: black;
-}
-
-.clearfix1>.box{
-  background-color: white;
-  border-radius: 7px;
-  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
-}
-
-.clearfix2>.box{
-  background-color: white;
-  border-radius: 7px;
+/* 배너 CSS */
+.banner>img{
+  align-items: center;
+  width: 1100px;
+  height: 200px;
+  margin-top: 15px;
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
 }
 
 
 
 /* 코로나 현황 CSS */
+.corona{
+  width: 1100px;
+  margin-top: 20px;
+}
+
 .corona div{
   background: #ffffff;
   display: inline-block;
@@ -75,12 +79,73 @@
   border-radius: 15px; */
   text-align: center;
   box-shadow: 0.1px 0.1px 7px 1px rgba(118,118,118,0.2);
+  width: 215px;
+  height: 100px;
+  border-radius: 15px;
+  margin: 5px 25px;
+}
+
+.corona div p {
+  font-size: 20px;
+  height: 40px;
+  margin: 10px;
+}
+
+.corona>div>span{
+  color:red;
 }
 
 .corona div p:after {
   content: "";
   position: absolute;
 }
+
+
+
+/* 내용 CSS */
+.clearfix1,.clearfix2{
+  color: black;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+.clearfix1{
+  float: left;
+}
+
+.clearfix2{
+  float: right;
+}
+
+.clearfix1>.box{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2); 
+  width: 95%;
+  height: 70%;
+  margin-bottom: 20px;
+}
+
+.clearfix2>.box{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.box{
+  font-size: small;
+}
+
+
+#chart1{
+  height: 60%;
+}
+
+
+
 
 
 /* 로고와 message부분 CSS */
@@ -99,6 +164,14 @@
   font-size: 9pt;
 }
 
+.button{
+  background:none;
+  border:0;
+  outline:0;
+  cursor:pointer;
+}
+
+
 
 /* 메뉴 CSS */
 .tap-menu {
@@ -112,202 +185,52 @@
   padding: 0;
   background: #ffffff;
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
-
 }
+
+.tab_wrap {
+  display:flex;
+}
+
+.tab-menu-naver-btn,.tab-menu-daum-btn {
+  width:80px;
+  height:40px;
+  transition:0.3s all;
+}
+
+.tab-menu-naver-btn,.tab-menu-daum-btn.on{
+  border-bottom:2px solid #df0000;
+  font-weight:700;
+  color:#df0000;
+} 
+
+.tab-menu-naver-btn,.tab-menu-daum-btn:hover {
+  color:#df0000;
+}
+<<<<<<< HEAD
 .tap-menu>li>a>img{
   background-color: transparent;
   border-radius:15px;
   box-shadow:  0.1px 0.1px 7px 1px  rgba(118,118,118,0.4);
 }
+=======
+
+>>>>>>> master
 .home{
   margin-top: 50px;
 }
+
 .tap-menu>li>a>.contact{
   width: 60px;
 }
+
 .tap-menu>li>a>img{
   align-content: center;
   margin-top:100px;
-  width: 30px;
-  height: 30px;
-  margin-left: 25px;
-  
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
 }
+
 .fas-fa-home{
   color:black;
-}
-
-
-
-
-
-@media(min-width:1210px){
-  .App {
-    margin: 30px auto;
-  }
-
-  .searchbar{
-    width: 400px;
-    margin-left: 45%;
-    height: 40px;
-  }
-
-  .searchbar>input{
-    height: 40px;
-  }
-
-  .search-icon{
-    height: 40px;
-    width: 40px;
-    padding: 5px;
-  }
-
-  .search-icon>img{
-    height: 30px;
-    width: 30px;
-  }
-
-  .content-box{
-    /* display: flex; */
-    
-  }
-  .banner>img{
-    align-items: center;
-    width: 1100px;
-    height: 200px;
-    margin-top: 15px;
-    box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
-  }
-  .clearfix1,.clearfix2{
-    color: black;
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-  }
-
-  .clearfix1{
-    float: left;
-  }
-  .clearfix2{
-    float: right;
-  }
-
-  .clearfix1>.box{
-    /* flex-direction: column; */
-    width: 95%;
-    height: 70%;
-    margin-bottom: 20px;
-  }
-
-  .clearfix2>.box{
-    /* flex-direction: column; */
-    width: 95%;
-    margin-bottom: 20px;
-  }
-
-  .box{
-    font-size: small;
-  }
-
-  #chart1{
-    height: 60%;
-  }
-
-  .corona{
-    width: 1100px;
-    
-  }
-
-  .corona div{
-    width: 215px;
-    height: 100px;
-    border-radius: 15px;
-    margin: 5px 25px;
-  }
-
-  .corona div p {
-    font-size: 20px;
-    height: 40px;
-    margin: 10px;
-  }
-  .corona>div>span{
-    color:red;
-  }
-
-  /* .corona div p:after {
-    border-bottom: 5px solid #282828;
-    width: 150px;
-    margin: 50px -150px;
-  } */
-  .button{
-    background:none;
-  border:0;
-  outline:0;
-  cursor:pointer;
-  }
-  .tab_wrap {
-    display:flex;
-  }
-  .tab-menu-naver-btn,.tab-menu-daum-btn {
-    width:80px;
-    height:40px;
-    transition:0.3s all;
-  }
-  .tab-menu-naver-btn,.tab-menu-daum-btn.on{
-    border-bottom:2px solid #df0000;
-    font-weight:700;
-    color:#df0000;
-  } 
-  .tab-menu-naver-btn,.tab-menu-daum-btn:hover {
-    color:#df0000;
-  }
-}
-
-
-
-@media(max-width:1210px){
-  .App{
-    margin: 20px 0 0 150px;
-  }
-
-  .searchbar{
-    margin-left: 250px;
-    width: 500px;
-    height: 70px;
-  }
-
-  .searchbar > input{
-    height: 35px;
-    font-size: 15px;
-  }
-
-  .search-icon{
-    width: 35px;
-    height: 35px;
-    padding: 4px;
-  }
-
-  .search-icon > img{
-    width: 25px;
-    height: 25px;
-  }
-
-  .corona div {
-    width: 30%;
-    height: 150px;
-    margin: 3%;
-  }
-
-  h4{
-    font-size: 30px;
-  }
-
-  .content-box{
-    width: 100%;
-  }
-
-  .box{
-    height: 400px;
-    margin-bottom: 60px;
-  }
 }

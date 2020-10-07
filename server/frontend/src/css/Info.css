@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+.tap-menu {
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+  
+  }
+  .home{
+    margin-top: 50px;
+  }
+  .tap-menu>li>a>.contact{
+    width: 60px;
+  }
+  .tap-menu>li>a>img{
+    align-content: center;
+    margin-top:100px;
+    width: 30px;
+    height: 30px;
+    margin-left: 25px;
+    
+  }

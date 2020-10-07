@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import img1 from '../src/images/search.png';
-import './App.css';
+import './css/App.css';
 import Logo from './logo';
 import $ from 'jquery';
 import home from '../src/images/home.png';
@@ -8,6 +8,9 @@ import info from '../src/images/info.png';
 import news from '../src/images/news.png';
 import contact from '../src/images/contact.png';
 import banner from '../src/images/banner.png';
+// import Info from '../src/Info';
+// import New from '../src/News';
+// import Mail from '../src/Mail';
 // import logo from '../src/images/logo.png';
 
 
@@ -38,7 +41,18 @@ function App() {
       });
   }, [])
 
- 
+  $('.tab-menu-btn').on('click',function(){
+    //버튼 색 제거,추가
+    $('.tab-menu-btn').removeClass('on');
+    $(this).addClass('on')
+    
+    //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+    var idx = $('.tab-menu-btn').index(this);
+    
+    $('.tab-box').hide();
+    $('.tab-box').eq(idx).show();
+  });
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -60,7 +74,9 @@ function App() {
           <li title="contact"><a href="#" className="contact"><img src={contact} alt="contact" /></a></li>
         </ul>
         
-
+        <div className ="banner ">
+          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
+        </div>
         <div className="corona">
           <div>
             <p>오늘 확진자수</p>
@@ -80,9 +96,13 @@ function App() {
           </div>
         </div>
        
+<<<<<<< HEAD
         <div className ="banner ">
           <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
         </div>
+=======
+        
+>>>>>>> master
     
       <div className="content-box">
 
@@ -97,9 +117,12 @@ function App() {
 
         <div className="clearfix2">
           <div><h4>코로나 주요 뉴스</h4></div>
-          <div className="box"> News box1</div>
-          <div className="box"> News box2</div>
-          <div className="box"> News box3</div>
+          <div className="tab_wrap">
+          <div className="box"> <button className ="tab-menu-btn on">네이버</button>
+          <button className ="tab-menu--btn">다음</button></div>
+          <div className = "tab_box1 tab_box on">네이버뉴스 박스</div>
+          <div className = "tab_box2 tab_box">다음뉴스 박스</div>
+          </div>
         </div>
       </div>
 

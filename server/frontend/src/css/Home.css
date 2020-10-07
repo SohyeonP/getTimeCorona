@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+
+/* 페이지 전체 CSS */
+.App {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 1100px;
+  margin: 30px auto;
+}
+
+
+/* 검색 CSS */
+.searchbar{
+  position: absolute;
+  top: 30px;
+  height: 40px;
+  width: 400px;
+  float: right;
+  overflow: hidden;
+  margin-left: 650px;
+}
+
+.searchbar > input {
+  display: none;
+  height: 40px;
+  width: 0px;
+  border: 1px solid #8f8f8f;
+  float: right;
+  padding: 0;
+}
+
+.search-icon {
+  float: right;
+  background: #ffffff;
+  border: 1px solid #8f8f8f;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+}
+
+.search-icon > img {
+  -moz-transform: scaleX(-1); 
+  -o-transform: scaleX(-1); 
+  -webkit-transform: scaleX(-1); 
+  transform: scaleX(-1);
+  height: 30px;
+  width: 30px;
+}
+
+
+
+
+/* 배너 CSS */
+.banner>img{
+  align-items: center;
+  width: 1100px;
+  height: 200px;
+  margin-top: 15px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+}
+
+
+
+/* 코로나 현황 CSS */
+.corona{
+  width: 1100px;
+  margin-top: 20px;
+}
+
+.corona div{
+  background: #ffffff;
+  display: inline-block;
+  /* border: 1px solid #282828;
+  border-radius: 15px; */
+  text-align: center;
+  box-shadow: 0.1px 0.1px 7px 1px rgba(118,118,118,0.2);
+  width: 215px;
+  height: 100px;
+  border-radius: 15px;
+  margin: 5px 25px;
+}
+
+.corona div p {
+  font-size: 20px;
+  height: 40px;
+  margin: 10px;
+}
+
+.corona>div>span{
+  color:red;
+}
+
+.corona div p:after {
+  content: "";
+  position: absolute;
+}
+
+
+
+/* 내용 CSS */
+.clearfix1,.clearfix2{
+  color: black;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+.clearfix1{
+  float: left;
+}
+
+.clearfix2{
+  float: right;
+}
+
+.clearfix1>.box{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2); 
+  width: 95%;
+  height: 70%;
+  margin-bottom: 20px;
+}
+
+.clearfix2>.box{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.box{
+  font-size: small;
+}
+
+
+#chart1{
+  height: 60%;
+}
+

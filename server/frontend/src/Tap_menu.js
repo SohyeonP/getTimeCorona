@@ -4,15 +4,16 @@ import home from '../src/images/home.png';
 import info from '../src/images/info.png';
 import news from '../src/images/news.png';
 import contact from '../src/images/contact.png';
+import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 
 function Tap_menu(){
   return(
     <ul className="tap-menu">
-      <li title="home"><a href="#" className="home"><img src={home} alt="home" /></a></li>
-      <li title="info"><a href="#" className="info"><img src={info} alt="info" /></a></li>
-      <li title="news"><a href="#" className="news"><img src={news} alt="news" /></a></li>
-      <li title="contact"><a href="#" className="contact"><img src={contact} alt="contact" /></a></li>
+      <li title="home"><Link to="/"><img src={home} alt="home" /></Link></li>
+      <li title="info"><Link to="/info"><img src={info} alt="info" /></Link></li>
+      <li title="news"><Link to="/news"><img src={news} alt="news" /></Link></li>
+      <li title="contact"><Link to="/contact"><img src={contact} alt="contact" /></Link></li>
     </ul>
   )
   

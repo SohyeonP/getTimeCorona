@@ -6,7 +6,11 @@ import com.alpha.dom.repository.CoronaMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -15,18 +19,27 @@ import java.util.List;
 @RequestMapping("/api/main")
 public class MainController {
 
-	@Autowired
+
 	// CoronaService coronaService;
+	@Autowired
 	private CoronaMapper coronaM;
+
+	@PersistenceContext
+	EntityManager entityManager;
+
 
 
 
 	@GetMapping
-	public String hello() {
+	public ModelAndView main(ModelAndView mav) {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy년 MM일 dd일 HH시mm분ss초");
-		String format_time = format.format(System.currentTimeMillis());
-		 coronaM.findAll();
-		return "최종 업데이트 시간-" + format_time + "깃 수정"+"<br>"+ coronaM.findAll();
+		/*String format_time = format.format(System.currentTimeMillis());*/
+		mav.setViewName("index");
+		Iterable<CMDTO> data = coronaM.findAll();
+		mav.addObject("data",data);
+//		System.out.print("Mav 내용===================="+mav);
+		return  mav;
+		/*return "최종 업데이트 시간-" + format_time + "깃 수정"+"<br>"+ coronaM.findAll();*/
 
 	}
 //	@GetMapping
@@ -37,11 +50,11 @@ public class MainController {
 //	}
 
 	@GetMapping("/update")
+	@PostConstruct
 	public String updateData() {
 
 		RESTAPI restapi = new RESTAPI();
 		restapi.Parsing();
-
 		CMDTO dto = new CMDTO();
 		dto.setSeq(restapi.seq);
 		dto.setState_date(restapi.stateDt);

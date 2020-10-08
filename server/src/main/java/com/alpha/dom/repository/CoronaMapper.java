@@ -15,9 +15,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CoronaMapper extends JpaRepository<CMDTO, String>{
-//  public List<CMDTO> findBySeq(String seq);
+    public List<CMDTO> findBySeq(String seq);
 //
-//  public List<CMDTO> findByDecide_cnt(String decide_cnt);
+//     public CMDTO findByDecide_cnt(String decide_cnt);
 //
-//  public List<CMDTO> findByState_date(String date);
+//     public List<CMDTO> findByState_date(String date);
 }

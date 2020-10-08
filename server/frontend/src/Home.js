@@ -4,7 +4,7 @@ import './css/Home.css';
 
 import $ from 'jquery';
 
-import banner from '../src/images/banner.png';
+import banner from '../src/images/s_banner.png';
 
 $(document).ready(function() {
   $(".search-icon").click(function() {
@@ -24,12 +24,12 @@ $(document).ready(function() {
 })
 
 function Home() {
-  const [message, setMessage] = useState("");
+  const [data, setMessage] = useState("");
   useEffect(() => {
-    fetch('/api/hello')
+    fetch('/api/main')
       .then(response => response.text())
-      .then(message => {
-        setMessage(message);
+      .then(data => {
+        setMessage(data);
       });
   }, [])
 
@@ -60,19 +60,19 @@ function Home() {
         <div className="corona">
           <div>
             <p>오늘 확진자수</p>
-            23,341 <span>(+125)</span>
+             24422<span>(+69)</span>
           </div>
           <div>
             <p>검사중</p>
-            20,782<span>(+225)</span>
+            20,978<span>(+1160)</span>
           </div>
           <div>
             <p>격리 해제</p>
-            20,832<span>(+182)</span>
+            22463<span>(+129)</span>
           </div>
           <div>
           <p>사망자</p>
-            395<span>(+2)</span>
+            427<span>(+2)</span>
           </div>
         </div>
        
@@ -80,7 +80,7 @@ function Home() {
           <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
         </div>
         
-    
+    {/* <div>{data}</div> */}
       <div className="content-box">
 
         <div className="clearfix1">

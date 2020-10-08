@@ -11,6 +11,7 @@ import javax.persistence.Id;
 public class CMDTO {
     @Id
     private String seq;
+
     private String state_date;
     private String decide_cnt;
     private String clear_cnt;

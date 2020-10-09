@@ -1,0 +1,40 @@
+.contact {
+  margin-bottom: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+}
+
+.form{
+  width: 700px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.form input{
+  width: 700px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.form textarea {
+  padding: 5px;
+  width: 700px;
+  height: 500px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.form a {
+  background: #e5968c;
+  text-decoration: none;
+  padding: 5px 15px;
+  color: #ffffff;
+  font-size: 20px; 
+}
+
+.form a:hover {
+  background: #ee7d6e;
+}

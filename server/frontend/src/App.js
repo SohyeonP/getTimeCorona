@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Tap_menu from "./Tap_menu";
 import Logo from './logo';
 import './css/App.css';

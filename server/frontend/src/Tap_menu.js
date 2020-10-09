@@ -4,7 +4,7 @@ import home from '../src/images/home.png';
 import info from '../src/images/info.png';
 import news from '../src/images/news.png';
 import contact from '../src/images/contact.png';
-import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Tap_menu(){

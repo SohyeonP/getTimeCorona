@@ -7,19 +7,19 @@ h1 {
   font-size: 45px;
 }
 
-.form{
+.gform{
   width: 700px;
   text-align: center;
   margin: 50px auto;
 }
 
-.form input{
+.gform input{
   width: 700px;
   height: 40px;
   margin-bottom: 20px;
 }
 
-.form textarea {
+.gform textarea {
   padding: 5px;
   width: 700px;
   height: 500px;
@@ -27,14 +27,36 @@ h1 {
   margin-bottom: 20px;
 }
 
-.form a {
+.gform button {
   background: #e5968c;
-  text-decoration: none;
   padding: 5px 15px;
   color: #ffffff;
   font-size: 20px; 
+  border: none;
 }
 
-.form a:hover {
+.gform button:hover {
+  background: #ee7d6e;
+}
+
+.gform button:focus {
+  outline: none;
+}
+
+.thankyou_message{
+  margin-top: 30%;
+  line-height: 60px;
+}
+
+.thankyou_message a{
+  color: #ffffff;
+  background: #e5968c;
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 20px; 
+  border: none;
+}
+
+.thankyou_message a:hover {
   background: #ee7d6e;
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import img1 from '../src/images/search.png';
 import './css/Home.css';
-
 import $ from 'jquery';
 
 import banner from '../src/images/s_banner.png';
+import MainChart from './MainChart';
 
 $(document).ready(function() {
   $(".search-icon").click(function() {
@@ -44,7 +44,9 @@ function Home() {
     $('.tab-box').hide();
     $('.tab-box').eq(idx).show();
   });
-  
+  function NewsClick(){
+    alert("현재는  준비중인 서비스 입니다.!");
+  }
   return (
     <div className="App">
       {/* <div className="search-bar"><input placeholder="코로나 내용을 검색해 주세요" /><img src={img1} alt="" /></div> */}
@@ -85,8 +87,7 @@ function Home() {
 
         <div className="clearfix1">
           <div><h4>확진자 그래프</h4></div>
-          <div className="box" ><canvas id="chart1" width="50px" height="20px">
-        </canvas></div>
+          <div className="box" ><MainChart/></div>
           <div className="box"> <canvas></canvas></div>
           <div className="box"> <canvas></canvas></div>
         </div>

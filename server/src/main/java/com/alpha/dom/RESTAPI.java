@@ -59,8 +59,8 @@ public class RESTAPI extends Thread {
                     "&serviceKey=Xfdt8Gl%2B2MrsGlqYpaDuwrXn5%2B5IHh3FNeg%2BcTRm7GGK8Ww1ex8bLWX9ySv4jKatXJAXm%2FKRVaqLNFfWhsvm%2Bw%3D%3D" +
                     "&pageNo=1" +
                     "&numOfRows=10" +
-                    "&startCreateDt=" +"20201007"+
-                    "&endCreateDt=" + "20201007" +
+                    "&startCreateDt=" +"20201010"+
+                    "&endCreateDt=" + "20201010" +
                     "&type=JSON";
             URL url = new URL(urlstr);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();

@@ -5,7 +5,9 @@ import $ from 'jquery';
 
 $(document).ready(function() {
   $(".send").click(function() {
+			setTimeout(function(){
 			$(".title").css("display","none");
+			},1500);
     })
   })
 

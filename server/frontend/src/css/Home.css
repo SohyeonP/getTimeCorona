@@ -148,3 +148,34 @@
   height: 60%;
 }
 
+
+/* 지역별 대응 홈페이지 바로가기 */
+
+.homepage {
+  width: 95%;
+  height: 100%;
+}
+
+.homepage ul{
+  padding: 0;
+}
+
+.homepage li{
+  list-style: none;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+
+.homepage a {
+  text-decoration: none;
+  color: #ffffff;
+  background: #e5968c;
+  font-size: 20px;
+  padding: 5px 105px;
+}
+
+.homepage a:hover{
+  background: #e66f5f;
+
+}

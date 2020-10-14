@@ -28,6 +28,7 @@ h1 {
 }
 
 .gform button {
+  cursor: pointer;
   background: #e5968c;
   padding: 5px 15px;
   color: #ffffff;

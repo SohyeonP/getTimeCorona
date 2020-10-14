@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import img1 from '../src/images/search.png';
 import './css/Home.css';
 import $ from 'jquery';
-
+import Examchart from './ExamChart';
 import banner from '../src/images/s_banner.png';
 import MainChart from './MainChart';
 
@@ -62,19 +62,19 @@ function Home() {
         <div className="corona">
           <div>
             <p>오늘 확진자수</p>
-             24422<span>(+69)</span>
+             24606<span>(+58)</span>
           </div>
           <div>
             <p>검사중</p>
-            20,978<span>(+1160)</span>
+            19303<span>(+321)</span>
           </div>
           <div>
             <p>격리 해제</p>
-            22463<span>(+129)</span>
+            22693<span>(+69)</span>
           </div>
           <div>
           <p>사망자</p>
-            427<span>(+2)</span>
+            432<span>(+2)</span>
           </div>
         </div>
        
@@ -87,18 +87,20 @@ function Home() {
 
         <div className="clearfix1">
           <div><h4>확진자 그래프</h4></div>
-          <div className="box" ><MainChart/></div>
-          <div className="box"> <canvas></canvas></div>
-          <div className="box"> <canvas></canvas></div>
+          <div className="box" id="ExamChart"><MainChart/></div>
+          <div><h4>검사현황</h4></div>
+          <div className="box"><Examchart/></div>
+          <div><h4>지역별 대응 홈페이지 바로가기</h4></div>
+          <div className="box">끄아아아아아 </div>
         </div>
 
 
         <div className="clearfix2">
           <div><h4>코로나 주요 뉴스</h4></div>
           <div className="tab_wrap">
-          <div className="box"> <button className ="tab-menu-btn on">네이버</button>
+          <div className="box">{/*<button className ="tab-menu-btn on">네이버</button>*/}
           {/* <button className ="tab-menu--btn">다음</button></div> */}
-          <div className = "tab_box1 tab_box on">네이버뉴스 박스</div>
+          <div className = "tab_box1 tab_box on"></div>
           {/* <div className = "tab_box2 tab_box">다음뉴스 박스</div> */}
           </div>
           </div>

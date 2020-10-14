@@ -95,7 +95,9 @@
   position: absolute;
 }
 
-
+#ExamChart{
+  align-items: flex-end;
+}
 
 /* 내용 CSS */
 .clearfix1,.clearfix2{
@@ -118,15 +120,22 @@
   border-radius: 7px;
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2); 
   width: 95%;
-  height: 70%;
   margin-bottom: 20px;
 }
-
+.clearfix2>.tab_wrap{
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
+  width: 95%;
+  height: 807px;
+  margin-bottom: 20px;
+}
 .clearfix2>.box{
   background-color: white;
   border-radius: 7px;
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
   width: 95%;
+  
   margin-bottom: 20px;
 }
 

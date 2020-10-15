@@ -21,7 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
-  "proxy":"https://openapi.naver.com",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -31,8 +31,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:3000",
-  
   "browserslist": {
     "production": [
       ">0.2%",

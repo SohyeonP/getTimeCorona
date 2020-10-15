@@ -96,8 +96,8 @@ function Home() {
           <div className="box"><Examchart /></div>
           <div><h4>지역별 대응 홈페이지 바로가기</h4></div>
           <div className="homepage">
-            <Mapchart />
-            {/* <ul>
+            {/* <Mapchart /> */}
+            <ul>
               <li>
                 <a href="https://www.seoul.go.kr/coronaV/coronaStatus.do">서울</a>
               </li>
@@ -110,7 +110,7 @@ function Home() {
               <li>
                 <a href="http://covid19.daegu.go.kr/">대구</a>
               </li>
-            </ul> */}
+            </ul>
           </div>
         </div>
 

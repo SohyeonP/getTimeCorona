@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapChart } from '@toast-ui/react-chart';
 import 'tui-chart/dist/maps/south-korea';
+import tuichart from 'tui-chart';
 
 const data = {
     series: [
@@ -104,8 +105,11 @@ const options = {
     },
     tooltip: {
         suffix:'명'
-    }
+    },
+    usageStatistics: false
 }
+
+
 const Map = () => (
         <MapChart
             data={data}

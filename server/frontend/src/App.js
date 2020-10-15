@@ -7,7 +7,7 @@ import Home from "./Home";
 import Info from "./Info";
 import Mail from "./Mail";
 import News from './News';
-
+import Search from './Search';
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Mail} />
-            <Route path="/news" component={News} />
+            <Route path="/news" component={Search} />
           </Switch>
         </main>
       </div>

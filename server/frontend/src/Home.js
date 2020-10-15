@@ -6,6 +6,8 @@ import Examchart from './ExamChart';
 import banner from '../src/images/s_banner.png';
 import MainChart from './MainChart';
 import Mapchart from './MapC';
+import News from '../src/News';
+
 
 $(document).ready(function () {
   $(".search-icon").click(function () {
@@ -117,7 +119,7 @@ function Home() {
           <div><h4>코로나 주요 뉴스</h4></div>
           <div className="tab_wrap">
             <div className="box">{/*<button className ="tab-menu-btn on">네이버</button>*/}
-              {/* <button className ="tab-menu--btn">다음</button></div> */}
+              {/* <button className ="tab-menu--btn">다음</button></div> */}<News/>
               <div className="tab_box1 tab_box on"></div>
               {/* <div className = "tab_box2 tab_box">다음뉴스 박스</div> */}
             </div>

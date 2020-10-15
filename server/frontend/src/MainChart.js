@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2';
 import {Doughnut} from 'react-chartjs-2';
 
 const CoronaMaindata = {
-    labels: ['10/2', '10/3', '10/4', '10/5', '10/6', '10/7', '10/8','10/9','10/10','10/11'],
+    labels: ['10/5', '10/6', '10/7', '10/8', '10/9', '10/10', '10/11','10/12','10/13','10/14'],
     datasets: [
       {
         label: '일일확진자',
@@ -23,7 +23,7 @@ const CoronaMaindata = {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [63, 75, 64, 73, 75, 114,69,54,72,58]
+        data: [75, 114, 69, 54, 72, 57,98,102,73,110]
       },
       {
         label: '일일확진자(국내)',
@@ -43,7 +43,7 @@ const CoronaMaindata = {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [53, 52, 44, 64, 66, 94,60,38,61,46]
+        data: [66,94,60, 38, 61, 45,69,69,53,95]
       },
       {
         label: '일일확진자(해외)',
@@ -63,7 +63,7 @@ const CoronaMaindata = {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [20, 23, 17, 9, 9,20,9,16,11,12]
+        data: [9, 20, 9, 16, 11,12,29,33,31,15]
       }
     ]
     

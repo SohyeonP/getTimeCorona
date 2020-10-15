@@ -5,7 +5,7 @@ const ExamChartdata={
     labels: ['검사중', '양성', '음성',],
     datasets: [{
         label: '검사결과',
-        data: [19303 , 24606,2366574],
+        data: [18262 , 24988,2407489],
         borderColor: [
             'rgba(239, 154, 154,1)',
             'rgba(179, 229, 252,1)',

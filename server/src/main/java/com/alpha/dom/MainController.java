@@ -1,6 +1,7 @@
 package com.alpha.dom;
 
 import com.alpha.dom.dto.CMDTO;
+import com.alpha.dom.dto.NewsResponseDto;
 import com.alpha.dom.repository.CoronaMapper;
 // import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -13,10 +14,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import com.alpha.dom.service.NewsService;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/main")
+@RequestMapping("/")
 public class MainController {
 
 
@@ -28,7 +30,7 @@ public class MainController {
 	EntityManager entityManager;
 
 
-
+	private NewsService newsService;
 
 	@GetMapping
 	public ModelAndView main(ModelAndView mav) {
@@ -78,5 +80,14 @@ public class MainController {
 
 		return coronaM.findAll();
 	}
+//	@GetMapping("/api/v1/news/{key}")
+//	public NewsResponseDto get(@PathVariable String keyword){
+//		return newsService.findByKeyword(keyword);
+//	}
+//	@PostMapping("/ip")
+//	public ResponseEntity<String> ip (HttpServletRequest request) {
+//			// 요청을 보낸 클라이언트의 IP주소를 반환합니다.
+//			return ResponseEntity.ok(request.getRemoteAddr());
+//	}
 
 }

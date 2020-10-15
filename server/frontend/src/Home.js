@@ -5,10 +5,17 @@ import $ from 'jquery';
 import Examchart from './ExamChart';
 import banner from '../src/images/s_banner.png';
 import MainChart from './MainChart';
+<<<<<<< Updated upstream
 
 $(document).ready(function () {
   $(".search-icon").click(function () {
     if ($(".searchbar input ").hasClass("on") === true) {
+=======
+import News from '../src/News';
+$(document).ready(function() {
+  $(".search-icon").click(function() {
+    if($(".searchbar input ").hasClass("on") === true){
+>>>>>>> Stashed changes
       $(".searchbar input").removeClass("on");
       $(".searchbar input").animate({
         width: '0px'
@@ -26,7 +33,7 @@ $(document).ready(function () {
 function Home() {
   const [data, setMessage] = useState("");
   useEffect(() => {
-    fetch('/api/main')
+    fetch('/')
       .then(response => response.text())
       .then(data => {
         setMessage(data);
@@ -54,6 +61,7 @@ function Home() {
         <button type="button" className="search-icon"><img src={img1} alt="search" /></button>
         <input type="search" placeholder="뉴스를 검색하세요."></input>
       </div>
+<<<<<<< Updated upstream
 
 
 
@@ -75,6 +83,34 @@ function Home() {
         <div>
           <p>사망자</p>
             432<span>(+2)</span>
+=======
+      
+        
+        
+        
+        
+        <div className="corona">
+          <div>
+            <p>오늘 확진자수</p>
+             24988<span>(+110)</span>
+          </div>
+          <div>
+            <p>검사중</p>
+            18,262<span>(+134)</span>
+          </div>
+          <div>
+            <p>격리 해제</p>
+            23,082<span>(+52)</span>
+          </div>
+          <div>
+          <p>사망자</p>
+            439<span>(+1)</span>
+          </div>
+        </div>
+       
+        <div className ="banner ">
+          <img src={banner} alt="우리를 위해 힘쓰신 의료진들을 응원합니다!"/>
+>>>>>>> Stashed changes
         </div>
       </div>
 
@@ -113,11 +149,20 @@ function Home() {
         <div className="clearfix2">
           <div><h4>코로나 주요 뉴스</h4></div>
           <div className="tab_wrap">
+<<<<<<< Updated upstream
             <div className="box">{/*<button className ="tab-menu-btn on">네이버</button>*/}
               {/* <button className ="tab-menu--btn">다음</button></div> */}
               <div className="tab_box1 tab_box on"></div>
               {/* <div className = "tab_box2 tab_box">다음뉴스 박스</div> */}
             </div>
+=======
+          <div className="box">{/*<button className ="tab-menu-btn on">네이버</button>*/}
+          {/* <button className ="tab-menu--btn">다음</button></div> */}
+          <News/>
+          <div className = "tab_box1 tab_box on"></div>
+          {/* <div className = "tab_box2 tab_box">다음뉴스 박스</div> */}
+          </div>
+>>>>>>> Stashed changes
           </div>
         </div>
       </div>

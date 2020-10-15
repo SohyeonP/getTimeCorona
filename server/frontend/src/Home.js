@@ -5,6 +5,7 @@ import $ from 'jquery';
 import Examchart from './ExamChart';
 import banner from '../src/images/s_banner.png';
 import MainChart from './MainChart';
+import Mapchart from './MapC';
 
 $(document).ready(function () {
   $(".search-icon").click(function () {
@@ -21,6 +22,21 @@ $(document).ready(function () {
       })
     }
   })
+  
+  // $('.tab-menu-btn').on('click', function () {
+  //   //버튼 색 제거,추가
+  //   $('.tab-menu-btn').removeClass('on');
+  //   $(this).addClass('on')
+
+  //   //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
+  //   var idx = $('.tab-menu-btn').index(this);
+
+  //   $('.tab-box').hide();
+  //   $('.tab-box').eq(idx).show();
+  // });
+  // function NewsClick() {
+  //   alert("현재는  준비중인 서비스 입니다.!");
+  // }
 })
 
 function Home() {
@@ -33,20 +49,6 @@ function Home() {
       });
   }, [])
 
-  $('.tab-menu-btn').on('click', function () {
-    //버튼 색 제거,추가
-    $('.tab-menu-btn').removeClass('on');
-    $(this).addClass('on')
-
-    //컨텐츠 제거 후 인덱스에 맞는 컨텐츠 노출
-    var idx = $('.tab-menu-btn').index(this);
-
-    $('.tab-box').hide();
-    $('.tab-box').eq(idx).show();
-  });
-  function NewsClick() {
-    alert("현재는  준비중인 서비스 입니다.!");
-  }
   return (
     <div className="App">
       {/* <div className="search-bar"><input placeholder="코로나 내용을 검색해 주세요" /><img src={img1} alt="" /></div> */}
@@ -92,7 +94,8 @@ function Home() {
           <div className="box"><Examchart /></div>
           <div><h4>지역별 대응 홈페이지 바로가기</h4></div>
           <div className="homepage">
-            <ul>
+            <Mapchart />
+            {/* <ul>
               <li>
                 <a href="https://www.seoul.go.kr/coronaV/coronaStatus.do">서울</a>
               </li>
@@ -105,7 +108,7 @@ function Home() {
               <li>
                 <a href="http://covid19.daegu.go.kr/">대구</a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
 

@@ -121,7 +121,9 @@
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2); 
   width: 95%;
   margin-bottom: 20px;
+  padding: 10px 0px;
 }
+
 .clearfix2>.tab_wrap{
   background-color: white;
   border-radius: 7px;
@@ -130,12 +132,12 @@
   height: 807px;
   margin-bottom: 20px;
 }
+
 .clearfix2>.box{
   background-color: white;
   border-radius: 7px;
   box-shadow: 0.1px 0.1px 7px 1px  rgba(118,118,118,0.2);
   width: 95%;
-  
   margin-bottom: 20px;
 }
 
